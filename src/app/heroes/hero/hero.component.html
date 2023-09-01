@@ -1,0 +1,30 @@
+<h1>{{ name }}</h1>
+
+<dl>
+  <td>Nombre:</td>
+  <dd>{{ name }}</dd>
+
+  <td>Edad:</td>
+  <dd>{{ age }}</dd>
+
+  <td>Método:</td>
+  <dd>{{ getHeroDescription() }}</dd>
+
+  <td>Capitalizado:</td>
+  <dd>{{ capitalizeFirstLetter(name) }}</dd>
+
+  <button
+    *ngIf="name !== 'spiderman'"
+    (click)="changeHero(name)"
+    class="btn btn-primary mx-2"
+  >
+    Cambiar heroe
+  </button>
+
+  <button
+  (click)="resetDefaultHero()"
+  class="btn btn-primary mx-2"
+>
+  Resetear heroe por defecto
+</button>
+</dl>
